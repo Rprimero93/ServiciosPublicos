@@ -1,4 +1,4 @@
-/* estilos.css - Optimizado */
+/* estilos.css - Versión Definitiva Optimizada */
 
 /* Variables CSS */
 :root {
@@ -50,7 +50,7 @@ body {
   align-items: center;
   padding: 12px 16px;
   border-bottom: 1px solid var(--color-border);
-  background-color: #105867/*var(--color-secondary); */
+  background-color: #105867;
 }
 
 .header h1 {
@@ -63,7 +63,7 @@ body {
   background: none;
   border: none;
   font-size: 24px;
-  color: var(--color-text-light);
+  color: #fff;
   cursor: pointer;
   width: 32px;
   height: 32px;
@@ -75,7 +75,7 @@ body {
 }
 
 .close-btn:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Formulario */
@@ -265,31 +265,6 @@ input[type="date"] {
   border: 1px solid #f4c3c6;
 }
 
-/* Responsive */
-@media (max-width: 640px) {
-  body {
-    padding: 10px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .split-input-small {
-    flex: 0 0 80px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-/* Accesibilidad */
-*:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
 /* Formato para valor de factura */
 #valorFactura {
   text-align: right;
@@ -301,7 +276,7 @@ input[type="date"] {
 }
 
 /* ============================================
-   NOTIFICACIÓN TOAST (NUEVA)
+   NOTIFICACIÓN TOAST
    ============================================ */
 
 .toast-notification {
@@ -434,8 +409,24 @@ input[type="date"] {
   box-shadow: 0 10px 40px rgba(235, 51, 73, 0.4), 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive para toast */
+/* Responsive */
 @media (max-width: 640px) {
+  body {
+    padding: 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .split-input-small {
+    flex: 0 0 80px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
   .toast-notification {
     top: 10px;
     right: 10px;
@@ -452,4 +443,10 @@ input[type="date"] {
   .toast-notification.hide {
     transform: translateY(-150px);
   }
+}
+
+/* Accesibilidad */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
