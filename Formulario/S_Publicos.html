@@ -1,0 +1,167 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Formulario S.Publicos</title>  
+  <link rel="stylesheet" href="estilos.css">  
+</head>  
+<body>  
+  <div class="container">  
+    <div class="header">  
+      <h1>Formulario S.Publicos</h1>  
+      <button class="close-btn" type="button" aria-label="Cerrar">×</button>  
+    </div>  
+  
+  
+    <form id="publicosForm">  
+      <!-- Fila 1: Sede y Tipo de servicio -->  
+      <div class="form-row">  
+        <div class="form-group">  
+          <label for="sede">Sede</label>  
+          <select id="sede" name="Sede" required>  
+            <option value="">Seleccione una sede</option>  
+            <option value="CAN">CAN</option>  
+            <option value="TEUSAQUILLO">TEUSAQUILLO</option>  
+            <option value="ROSALES">ROSALES</option>  
+          </select>  
+        </div>  
+  
+  
+        <div class="form-group">  
+          <label for="tipoServicio">Tipo de servicio</label>  
+          <select id="tipoServicio" name="TipoServicio" required>  
+            <option value="">Seleccione tipo de servicio</option>  
+            <option value="ENERGIA">ENERGIA</option>  
+            <option value="ACUEDUCTO">ACUEDUCTO</option>  
+            <option value="SERVICIO ESPECIAL">SERVICIO ESPECIAL</option>  
+            <option value="TELEFONIA">TELEFONIA</option>  
+          </select>  
+        </div>  
+      </div>  
+  
+  
+      <!-- Fila 2: Proveedor y Nº de cuenta -->  
+      <div class="form-row">  
+        <div class="form-group">  
+          <label for="proveedor">Proveedor</label>  
+          <select id="proveedor" name="Proveedor" disabled>  
+            <option value="">Seleccione primero el servicio</option>  
+          </select>  
+        </div>  
+  
+  
+        <div class="form-group">  
+          <label for="nroCuenta">Nº de cuenta</label>  
+          <input   
+            type="text"   
+            id="nroCuenta"   
+            name="NroCuenta"   
+            placeholder="Se completará automáticamente"  
+            readonly  
+          >  
+        </div>  
+      </div>  
+  
+  
+      <!-- Fila 3: Nº de factura y Valor de la factura -->  
+      <div class="form-row">  
+        <div class="form-group">  
+          <label for="nroFactura">Nº de factura</label>  
+          <input   
+            type="text"   
+            id="nroFactura"   
+            name="NroFactura"   
+            placeholder="Ingrese el número de factura"  
+          >  
+        </div>  
+  
+  
+        <div class="form-group">  
+          <label for="valorFactura">Valor de la factura</label>  
+          <input   
+            type="text"   
+            id="valorFactura"   
+            name="ValorFactura"   
+            placeholder="$ 0"
+            inputmode="numeric"
+          >  
+        </div>  
+      </div>  
+  
+  
+      <!-- Fila 4: Periodo y Consumo -->  
+      <div class="form-row">  
+        <div class="form-group">  
+          <label for="periodo">Periodo</label>  
+          <input   
+            type="text"   
+            id="periodo"   
+            name="Periodo"   
+            placeholder="Ej: 10/04/2025 - 09/05/2025"  
+          >  
+        </div>  
+  
+  
+        <div class="form-group form-group-split">  
+          <div class="split-input">  
+            <label for="consumo">Consumo</label>  
+            <input   
+              type="number"   
+              id="consumo"   
+              name="Consumo"   
+              step="0.01"   
+              placeholder="Ingrese el consumo"  
+            >  
+          </div>  
+          <div class="split-input-small">  
+            <label for="unidad">Unidad</label>  
+            <input   
+              type="text"   
+              id="unidad"   
+              name="Unidad"   
+              placeholder="Auto"  
+              readonly  
+            >  
+          </div>  
+        </div>  
+      </div>  
+  
+  
+      <!-- Fila 5: Fecha de llegada y Fecha de vencimiento -->  
+      <div class="form-row">  
+        <div class="form-group">  
+          <label for="fechaLlegada">Fecha de llegada</label>  
+          <input   
+            type="date"   
+            id="fechaLlegada"   
+            name="FechaLlegada"  
+          >  
+        </div>  
+  
+  
+        <div class="form-group">  
+          <label for="fechaVencimiento">Fecha de vencimiento</label>  
+          <input   
+            type="date"   
+            id="fechaVencimiento"   
+            name="FechaVencimiento"  
+          >  
+        </div>  
+      </div>  
+  
+  
+      <!-- Botón de acción -->  
+      <div class="form-actions">  
+        <button type="submit" class="btn btn-primary">Registrar</button>  
+      </div>  
+  
+  
+      <!-- Mensaje de estado -->  
+      <div id="mensaje" class="mensaje" role="status" aria-live="polite"></div>  
+    </form>  
+  </div>  
+  <script src="power-automate.js"></script>  
+  <script src="form-logic.js"></script>  
+</body>  
+</html>
